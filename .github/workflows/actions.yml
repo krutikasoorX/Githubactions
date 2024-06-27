@@ -26,9 +26,3 @@ jobs:
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
         run: python main.py
-<<<<<<< HEAD
-        
-=======
-          
-      
->>>>>>> 2714b22cab21642b45b8daa7c8bb8408f1250f31
