@@ -10,7 +10,11 @@ jobs:
     steps:
 
       - name: checkout repo content
+<<<<<<< HEAD
         uses: actions/checkout@v3 # checkout the repository content to github runner
+=======
+        uses: actions/checkout@v4 # checkout the repository content to github runner
+>>>>>>> 6c6b61be35ea1cad1df22be0d6605286d382b7a9
 
       - name: setup python
         uses: actions/setup-python@v5
@@ -35,7 +39,11 @@ jobs:
           git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
           
       - name: push changes
+<<<<<<< HEAD
         uses: ad-m/github-push-action@v0.7.0
+=======
+        uses: ad-m/github-push-action@v0.8.0
+>>>>>>> 6c6b61be35ea1cad1df22be0d6605286d382b7a9
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main 
