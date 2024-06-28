@@ -3,8 +3,7 @@ name: run main.py
 on:
   push:
     branches:
-      - 'main'
-      - 'myBranch'
+      - '**'
   schedule:
     - cron: '*/5 * * * *' # After 5 minutes
 
@@ -37,13 +36,6 @@ jobs:
       #- name: Build and test on main branch
       # if: github.ref == 'refs/heads/main'
       # run: |
-
-      - name: Build and test on second branch
-        #if: github.ref == 'refs/heads/myBranch'
-        env:
-          SOME_SECRET: ${{ secrets.SOME_SECRET }}
-        run: python myBranch/main.py
-
       
         
 
