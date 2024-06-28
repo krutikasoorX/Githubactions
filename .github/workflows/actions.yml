@@ -40,7 +40,7 @@ jobs:
 
       - name: Build and test on second branch
         if: github.ref == 'refs/heads/myBranch'
-        run: |
+        run: python main.py
       
         
 
