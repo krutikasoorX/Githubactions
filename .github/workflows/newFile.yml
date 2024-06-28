@@ -22,16 +22,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      -  name: Fetch Python file from different branch
-         run: |
-            git fetch origin myBranch:myBranch  # Fetch the branch from remote
-            git checkout myBranch# Checkout the branch locally
-            cp pythonFile1.py $GITHUB_WORKSPACE/ 
+     # -  name: Fetch Python file from different branch
+      #   run: |
+       #     git fetch origin myBranch:myBranch  # Fetch the branch from remote
+        #    git checkout myBranch# Checkout the branch locally
+         #   cp pythonFile1.py $GITHUB_WORKSPACE/ 
           
       - name: execute py script # run main.py
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
-        run: python $GITHUB_WORKSPACE/pythonFile1.py
+        run: python pythonFile1.py
 
       - name: commit files
         run: |
