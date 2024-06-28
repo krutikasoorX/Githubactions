@@ -38,9 +38,9 @@ jobs:
       # if: github.ref == 'refs/heads/main'
       # run: |
 
-      #- name: Build and test on second branch
-      # if: github.ref == 'refs/heads/myBranch'
-      # run: |
+      - name: Build and test on second branch
+        if: github.ref == 'refs/heads/myBranch'
+        run: |
       
         
 
