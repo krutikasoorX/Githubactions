@@ -25,7 +25,7 @@ jobs:
       - name: execute py script # run main.py
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
-        run: python refs/heads/myBranch/pythonFile1.py
+        run: python pythonFile1.py
 
       - name: commit files
         run: |
