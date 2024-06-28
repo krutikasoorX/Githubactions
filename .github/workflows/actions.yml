@@ -7,9 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    concurrency:
-          group: 'refs/heads/myBranch'
-          cancel-in-progress: true
     steps:
 
       - name: checkout repo content
