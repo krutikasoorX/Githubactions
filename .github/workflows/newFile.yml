@@ -1,18 +1,12 @@
 name: run main.py
 
 on:
-  push:
-    branches:
-      - '**'
   schedule:
-    - cron: '*/5 * * * *' # After 5 minutes
+    - cron: '*/3 * * * *' # After 3 minutes
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    concurrency:
-          group: 'refs/heads/myBranch'
-          cancel-in-progress: true
     steps:
 
       - name: checkout repo content
@@ -31,13 +25,7 @@ jobs:
       - name: execute py script # run main.py
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
-        run: python main.py
-
-      #- name: Build and test on main branch
-      # if: github.ref == 'refs/heads/main'
-      # run: |
-      
-        
+        run: python pythonFile1.py
 
       - name: commit files
         run: |
