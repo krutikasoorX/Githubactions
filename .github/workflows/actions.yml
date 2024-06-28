@@ -31,6 +31,14 @@ jobs:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
         run: python main.py
 
+      - name: Build and test on main branch
+        if: github.ref == 'refs/heads/main'
+        run: |
+
+      - name: Build and test on second branch
+        if: github.ref == 'refs/heads/myBranch'
+        run: |
+
       - name: commit files
         run: |
           git config --local user.email "action@github.com"
