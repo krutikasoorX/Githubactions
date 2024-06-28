@@ -1,9 +1,6 @@
 name: run main.py
 
 on:
-  push:
-    branches:
-      - '**'
   schedule:
     - cron: '*/5 * * * *' # After 5 minutes
 
