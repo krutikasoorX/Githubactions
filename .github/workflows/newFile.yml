@@ -1,8 +1,8 @@
 name: run newFile.py
 
-on:
-  schedule:
-    - cron: '*/3 * * * *' # After 3 minutes
+#on:
+ # schedule:
+  #  - cron: '*/3 * * * *' # After 3 minutes
 
 jobs:
   build:
